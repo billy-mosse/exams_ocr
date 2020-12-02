@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.config["TRAP_HTTP_EXCEPTIONS"] = True
 
 import sys
-@app.route("/process", methods = ['GET'])
+@app.route("/process", methods = ['POST'])
 def process():
     file_path = request.form.get("file_path")
     print(file_path)
