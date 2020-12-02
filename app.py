@@ -14,7 +14,7 @@ def process():
     print(file_path)
     sys.stdout.flush()
 
-    return "Hola"
+    return file_path
 
 
 
