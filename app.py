@@ -7,9 +7,13 @@ from flask import request, abort, make_response
 app = Flask(__name__)
 app.config["TRAP_HTTP_EXCEPTIONS"] = True
 
+import sys
+@app.route("/process", methods = ['GET'])
+def process():
+    file_path = request.form.get("file_path")
+    print(file_path)
+    sys.stdout.flush()
 
-@app.route("/helloworld", methods = ['GET'])
-def helloworld():
     return "Hola"
 
 
