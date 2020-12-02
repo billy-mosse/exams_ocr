@@ -2,7 +2,6 @@ import traceback
 
 from flask import Flask
 from flask import request, abort, make_response
-import utils
 
 
 app = Flask(__name__)
@@ -16,4 +15,4 @@ def helloworld():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0", port=5010)
